@@ -1,0 +1,367 @@
+/*初始化*/
+body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textarea,p {
+	margin:0px;
+	padding:0px;
+	font-size:13px;
+}
+/*无序列表没有前面的标记*/
+ul {
+	list-style:none;
+}
+/*图片或者链接图片没有边框*/
+img, a img {
+	border:none;
+}
+/*链接没有下划线*/
+a {
+	text-decoration:none;
+}
+/*:hover选择器，当鼠标靠近时，显示下划线*/
+a : hover {
+	text-decoration:underline;
+}
+/*repeat-x 表示向x轴方向延伸扩展*/
+#header {
+	height:452px;
+	background:url(top_bg.jpg) repeat-x;
+	color:white;
+}
+
+#main {
+	background:url(main_top_bg.jpg) repeat-x;
+}
+
+#main1 {
+	background:url(main1_bottom_bg.jpg) 0 bottom repeat-x;
+}
+
+#footer {
+	height : 100px;
+	background:url(footer_bg.jpg) repeat-x;	
+}
+
+#top {
+	height:100px;
+}
+
+#top .logo {
+	width:291px;
+	padding:25px 0 0 25px;/*上，右，下，左内边距 */
+	float:left;
+}
+
+#top h1 span {
+	font-size :14px;
+	color : #CCCCCC;
+	float:right;
+}
+
+#top .search {
+	width : 280px;
+	height : 50px;
+	float : right;
+	margin : 30px 30px 0 30px;
+}
+
+#top .search .text {
+	width : 180px;
+	height : 15px;
+	background : #161B1F;
+	color : white;
+	border : 1px solid #0B0E10;
+	padding : 5px;
+}
+
+#top .search .submit {
+	width : 80px;
+	height : 28px;
+	cursor : pointer;/*鼠标靠近，显示为一个小手*/
+}
+
+#nav {
+	height : 50px;
+}
+
+#nav ul {
+	margin : 0 0 0 25px;
+}
+
+#nav ul  li{
+	float:left;
+	margin : 0 10px 0 0;
+}
+
+#nav ul li a {
+	color : black;
+	font-size : 13px;
+	font-weight : bold;
+	display : block;
+	width : 103px;
+	height : 27px;
+	text-align : center;
+	line-height : 27px;
+	margin : 10px 0 0 0;
+	background : url(default.png);
+}
+
+#nav ul li a:hover {
+	background : url(d_hover.png);
+	color : white;
+	text-decoration : none;
+}
+
+#runplay {
+	height : 301px;
+	background : url(runplay_bg.jpg);
+}
+
+#runplay .left {
+	width : 300px;
+	float : left;
+	margin : 50px 0 0 30px;
+	display : inline;
+}
+
+#runplay .right {
+	width : 300px;
+	float : left;
+	margin : 50px 0 0 80px;
+	display : inline;
+}
+
+#runplay .right dl dt {
+	font-size : 24px;
+	margin : 0 0 20px 0;
+}
+
+#runplay .right dl dd.txt {
+	font-size : 16px;
+	color : white;
+	margin : 0 0 20px 0;
+}
+
+#runplay .right dl dd.btn a {
+	background : url(default.png);
+	display : block;
+	width : 103px;
+	height : 27px;
+	text-align : center;
+	line-height : 27px;
+	color : white;
+	text-decoration : none;
+	font-weight : bold;
+}
+
+#runplay .right dl dd.btn a:hover {
+	background : url(d_hover.png);
+}
+
+.auto {
+	width : 100%;
+	margin : 0 auto;
+}
+
+#wrap {
+	width : 100%;
+	height : 850px;
+	margin : 0 auto;
+}
+
+#wrap #leftBody {
+	width : 60%;
+	height : 850px;
+	float : left;
+}
+
+#wrap #rightBody {
+	width : 30%;
+	height : 850px;
+	float : right;
+}
+
+#wrap #leftBody  #leftDiv1 h2 {
+	color : 0x000000;
+	font-size : 24px;
+	font-weight : normal;
+	margin : 25px 0 20px 0; 
+}
+
+#wrap #leftBody  #leftDiv1 p  {
+	color : #555555;
+}
+
+#wrap #leftBody  #leftDiv1 p a {
+	color : #0074C5;
+}
+
+#wrap #leftBody #leftDiv2 h2 {
+	color:#000000;
+	font-size:24px;
+	font-weight:normal;
+	margin:25px 0 20px 0;
+}
+
+#wrap #leftBody  #leftDiv2 ul li {
+	width : 30%;
+	height : 17%;
+	background : 0xF1F2EA;
+	border : 1px solid #D5D7CA;
+	padding : auto;
+	float : left;
+	margin : 1% 2% 4% 0%;
+}
+
+#wrap #leftBody  #leftDiv2 ul li p {
+	font-size : 16px;
+	color : #000000;
+	margin-top : 5px;
+	font-weight : normal;
+	font-family :微软雅黑;
+}
+
+#wrap #leftBody #leftDiv3 {
+	clear:both;
+}
+#wrap #leftBody #leftDiv3 a {
+	background:url(default.png);
+	display:block;
+	width:103px;
+	height:27px;
+	text-align:center;
+	line-height:27px;
+	color:#ffffff;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+
+#wrap #leftBody #leftDiv3 a:hover {
+	background:url(d_hover.png);
+}
+
+#rightBody .rightDiv1 h2 {
+	color:#000000;
+	font-size:24px;
+	font-weight:normal;
+	margin:60px 0 30px 0;
+}
+
+#rightBody .rightDiv1 ul li {
+	border-bottom:1px dashed #CCCCCC;
+	font-weight:normal;
+	margin:25px 0 0 0;
+}
+
+#rightBody .rightDiv1 ul li h3 a {
+	font-weight:normal;
+	text-decoration:underline;
+	font-size:16px;
+}
+
+#rightBody .rightDiv1 ul li h3 a:hover {
+	color:#009900;
+}
+
+#rightBody .rightDiv1 ul li p {
+	color:#555555;
+	font-size:12px;
+	margin:10px 0 10px 0;
+}
+
+
+#rightBody .rightDiv2 dl {
+	height:64px;
+	margin:35px 0 0 0;
+}
+
+#rightBody .rightDiv2 dl dt {
+	padding:1px 0 3px 0;;
+}
+
+#rightBody .rightDiv2 dl dt a {
+	font-size:24px;
+	color:#333333;
+	font-weight:normal;
+}
+
+#rightBody .rightDiv2 dl dd {
+	font-size:12px;
+	color:#333333;
+	font-weight:normal;
+	padding:10px;
+}
+
+#rightBody .rightDiv2 dl.dl1 {
+	background:url(twitter.png) 300px center no-repeat;
+}
+#rightBody .rightDiv2 dl.dl2 {
+	background:url(rss.png) 300px center no-repeat;
+}
+
+
+
+#footer p {
+	text-align:center;
+	color:#FFFFFF;
+	line-height:200%;
+}
+
+#footer p.p1 {
+	padding-top:20px;
+}
+
+#footer p a {
+	color:#FFFFFF;
+	text-decoration:underline;
+	margin:0 20px 0 0;
+}
+
+#leftBody {
+	margin-left:20px;
+}
+
+#leftBody p.p0 {
+	color:#000000;
+	font-size:18px;
+	margin:30px 0 30px 0;
+}
+
+#leftBody form label {
+	display:block;
+	font-size:14px;
+	color:#555555;
+	margin:15px 0 5px 0;
+}
+
+#leftBody form input {
+	height:20px;
+}
+
+#leftBody form input.btn_sub {
+	background:url(default.png);
+	display:block;
+	width:103px;
+	height:27px;
+	text-align:center;
+	line-height:27px;
+	color:#ffffff;
+	text-decoration:none;
+	font-weight:bold;
+	border:none;
+	cursor:pointer;
+	float:left;
+	margin-top:10px;
+}
+#leftBody form input.btn_sub:hover {
+	background : url(d_hover.png);
+}
+
+#leftBody form  input.btn2 {
+	margin-left:165px;
+}
+
+
+
+
+
+

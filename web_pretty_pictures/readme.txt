@@ -1,0 +1,1 @@
+This project implements a simple basic website framework of pretty pictures. 

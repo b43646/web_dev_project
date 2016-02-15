@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>图书查询系统</title>
+
+<link rel="stylesheet" type="text/css" href="images/1.css" />
+
+</head>
+
+<body>
+				<div id="leftBody">
+					<h1 class="p0">图书查询系统</h1>
+					<form action="{% url 'search' %}"  name="form1" method="post">
+						{% csrf_token %}
+						<label for="label1">书名：</label>
+						<input type="text" list="name_list" name="name" id="label1" size=30/>
+						<datalist id="name_list">
+							{% if book_list %}
+
+								{% for book in book_list %}
+								<option   value = {{ book.name }} />
+								{% endfor %} 
+
+							{% endif %}
+						</datalist> 
+						
+						<label for="label2">作者：</label>
+						<input type="text" list="author_list" name="author" id="label2" size=30/>
+						<datalist id="author_list">
+							{% if book_list %}
+
+								{% for book in book_list %}
+								<option   value={{ book.author }} />
+								{% endfor %} 
+
+							{% endif %}
+
+						</datalist> 
+						
+						<label for="label3">类别：</label>
+						<input type="text" list="class_list" name="cls" id="label3" size=30/>
+						<datalist id="class_list">
+							{% if book_list %}
+
+								{% for book in book_list %}
+								<option   value={{ book.cls }} />
+								{% endfor %} 
+
+							{% endif %}
+
+						</datalist> 
+						
+						
+						<input class="btn_sub" type="submit" value="提交"/>
+						<input class="btn_sub btn2" type="reset" value="重置"/>							
+
+					</form>
+				</div>
+				
+				<div  id="show">
+					<table border="1" width="600" frame="hsides" rules="groups">
+						 <rowgroup span="1" width="200"></rowgroup>
+						 <rowgroup span="3" width="400"></rowgroup>
+
+					<thead>
+						 <tr>
+							  <td>Book Name</td>
+							  <td>Author</td>
+							  <td>Class</td>
+						 </tr>
+					</thead>
+
+					<tbody>
+						{% if book_list %}
+
+							{% for book in book_list %}
+								<tr>
+									<td>{{ book.name }}</td>
+									<td>{{ book.author }}</td>
+									<td>{{ book.cls }}</td>
+								 </tr>
+							{% endfor %}
+
+						{% else %}
+							 <tr>
+								  <td>NA</td>
+								  <td>NA</td>
+								  <td>NA</td>
+							 </tr>
+						{% endif %}
+
+
+					</tbody>
+					</table>
+				</div>
+
+</body>
+
+</html>

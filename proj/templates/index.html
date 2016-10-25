@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+	<form action="/index/" method="post">
+		{% csrf_token %}
+		<input type="number" name="v1"><br>
+		<input type="number" name="v2"><br>
+		<button type="submit" name="submit">Add</button>
+		{{sum}}
+	</form>
+</body>
+</html>

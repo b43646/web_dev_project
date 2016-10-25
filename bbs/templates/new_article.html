@@ -1,0 +1,57 @@
+{%  extends 'index.html' %}
+
+{% block page-show  %}
+    <div class="new_article form-horizontal col-md-6 col-md-offset-3" >
+        <form action="/new/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="titile">title</label>
+            <input type="text" name="title" class="form-control" placeholder=""><br>
+
+            <label for="catagory">catagory</label>
+            <input type="text" name="category" class="form-control"><br>
+
+            <label for="content">content</label>
+            <textarea name="content" id="create_bbs" class="form-control"></textarea><br>
+
+            <label for="author">author</label>
+            <input type="text" name="author" class="form-control"><br>
+
+            <label for="summary">summary</label>
+            <input type="text" name="summary" class="form-control"><br>
+
+            <input type="file" name="head_img">
+            <button type="submit" class="btn btn-default">发贴</button>
+        </form>
+    </div>
+
+{% endblock %}
+{% block end %}
+
+<script src="/static/tinymce/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript">
+
+        tinymce.init({
+            selector: "#create_bbs",
+            theme: "modern",
+            //width: 300,
+            height: 300,
+            plugins: [
+                 "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                 "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                 "save table contextmenu directionality emoticons template paste textcolor"
+           ],
+           //content_css: "css/content.css",
+           toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+           style_formats: [
+                {title: 'Bold text', inline: 'b'},
+                {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+                {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+                {title: 'Example 1', inline: 'span', classes: 'example1'},
+                {title: 'Example 2', inline: 'span', classes: 'example2'},
+                {title: 'Table styles'},
+                {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+            ]
+        });
+
+</script>
+{% endblock %}

@@ -7,6 +7,26 @@
 
 <link rel="stylesheet" type="text/css" href="images/1.css" />
 
+<style type="text/css">
+	form {
+			margin:20px 20px 20px 0px;
+		}
+	#lefyBody h1 {
+		margin : 20px;
+		text-align:center;
+	}
+
+	Body {
+		font-family :微软雅黑;
+	}
+	#show {
+		font-size : 14px;
+		color : #000000;
+		margin-top : 5px;
+		font-weight : normal;
+	}
+</style>
+
 </head>
 
 <body>
@@ -17,10 +37,10 @@
 						<label for="label1">书名：</label>
 						<input type="text" list="name_list" name="name" id="label1" size=30/>
 						<datalist id="name_list">
-							{% if book_list %}
+							{% if name_list %}
 
-								{% for book in book_list %}
-								<option   value = {{ book.name }} />
+								{% for item in name_list %}
+								<option value= {{item.name}} >
 								{% endfor %} 
 
 							{% endif %}
@@ -29,10 +49,10 @@
 						<label for="label2">作者：</label>
 						<input type="text" list="author_list" name="author" id="label2" size=30/>
 						<datalist id="author_list">
-							{% if book_list %}
+							{% if author_list %}
 
-								{% for book in book_list %}
-								<option   value={{ book.author }} />
+								{% for item in author_list %}
+								<option   value={{ item.author }} >
 								{% endfor %} 
 
 							{% endif %}
@@ -42,10 +62,10 @@
 						<label for="label3">类别：</label>
 						<input type="text" list="class_list" name="cls" id="label3" size=30/>
 						<datalist id="class_list">
-							{% if book_list %}
+							{% if cls_list %}
 
-								{% for book in book_list %}
-								<option   value={{ book.cls }} />
+								{% for item in cls_list %}
+								<option   value={{ item.cls }} >
 								{% endfor %} 
 
 							{% endif %}
@@ -73,9 +93,9 @@
 					</thead>
 
 					<tbody>
-						{% if book_list %}
+						{% if book_list_search %}
 
-							{% for book in book_list %}
+							{% for book in book_list_search %}
 								<tr>
 									<td>{{ book.name }}</td>
 									<td>{{ book.author }}</td>
